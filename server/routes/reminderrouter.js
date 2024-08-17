@@ -25,7 +25,7 @@ setInterval(async () => {
             });
 
             const mailOptions = {
-              from: "atchayaramesh574@gmail.com",
+              from: " ",
               to: `${element.caretakeremail}`,
               subject: "Reminder for medicine",
               text: `Hello,

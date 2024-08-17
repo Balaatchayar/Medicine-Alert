@@ -34,10 +34,10 @@ Create a `.env` file in the `server` directory.
 
 Add the following variables:
 
-     ```env
-     EMAIL_USER=your-email@example.com
-     EMAIL_PASS=your-email-password
-     ```
+   ```env
+    EMAIL_USER=your-email@example.com
+    EMAIL_PASS=your-email-password
+   ```
 
 
 

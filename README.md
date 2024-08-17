@@ -22,7 +22,7 @@ Medicine Alert is a MERN stack application that sends email reminders to patient
     npm install
     npm start
 
-4.### Database Setup
+4.**Database Setup**
 
 To connect your database, you need to update the `server/index.js` file with the appropriate MongoDB connection string.
 
@@ -30,14 +30,14 @@ To connect your database, you need to update the `server/index.js` file with the
 
 ### Server
 
-1. Create a `.env` file in the `server` directory.
+Create a `.env` file in the `server` directory.
 
-2. Add the following variables:
+Add the following variables:
 
-    ```env
-    EMAIL_USER=your-email@example.com
-    EMAIL_PASS=your-email-password
-    ```
+     ```env
+     EMAIL_USER=your-email@example.com
+     EMAIL_PASS=your-email-password
+     ```
 
 
 

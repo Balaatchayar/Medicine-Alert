@@ -1,0 +1,16 @@
+/* src/HomePage.css */
+.home-page {
+    background-image: url('./Assets/medi.jpg'); /* Path to the image in src/assets */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* Text color to contrast with background */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  

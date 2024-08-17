@@ -1,0 +1,188 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Navbar Styles */
+.main {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+  background-color: #282c34;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.btn {
+  background-color: #61dafb;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #21a1f1;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #ebedf1;
+}
+
+/* Add Reminder Form Styles */
+.add-reminder-page {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-reminder-page h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #282c34;
+  font-weight: 700;
+}
+
+.add-reminder-page p {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.add-reminder-page input {
+  width: calc(100% - 20px);
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.add-reminder-page input:focus {
+  border-color: #61dafb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+}
+
+.error {
+  color: #e53e3e; /* Red color for error messages */
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  background-color: #61dafb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #21a1f1;
+}
+
+/* All Reminder Page Styles */
+#carts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+}
+
+.cart {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 15px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.remindme-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.cart h1 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cart p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cart h3 {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.cart h3 span {
+  color: #555;
+}
+
+#delete {
+  background: #e53e3e;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#delete:hover {
+  background: #c53030;
+}

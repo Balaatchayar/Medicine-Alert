@@ -1,12 +1,15 @@
 const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer");
-const cors = require('cors'); // Add this line
+const cors = require('cors');
+const dotenv = require('dotenv'); // Add this line
+
+dotenv.config(); // Add this line
 
 const router = express.Router();
 const Reminder = require("../schema/reminderschema");
 
-app.use(cors()); // Add this line
+app.use(cors());
 
 setInterval(async () => {
   const data = await Reminder.find({});
@@ -19,20 +22,20 @@ setInterval(async () => {
             const transporter = nodemailer.createTransport({
               service: "gmail",
               auth: {
-                user: " ",
-                pass: " ",
+                user: process.env.EMAIL_USER, 
+                pass: process.env.EMAIL_PASS, 
               },
             });
 
             const mailOptions = {
-              from: " ",
+              from: process.env.EMAIL_USER, 
               to: `${element.caretakeremail}`,
               subject: "Reminder for medicine",
               text: `Hello,
 
-    This is a friendly reminder to take your medicine:
+  This is a friendly reminder to take your medicine:
 
-    Medicine Name: ${element.medicinename}`,
+  Medicine Name: ${element.medicinename}`,
             };
 
             try {

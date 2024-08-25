@@ -39,6 +39,7 @@ Add the following variables:
     EMAIL_PASS=your-email-password
    ```
 
+![Project Screenshot](./client/src/Assets/Screenshot1.png)
 
 
 

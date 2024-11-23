@@ -1,40 +1,31 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require("mongoose");
-const cors = require('cors');
+require('dotenv').config()
+const express = require('express')
+const mongoose = require("mongoose")
+const cors = require('cors')
 
-const app = express();
-const ReminderModel = require("./models/Reminder"); // Ensure you have the Reminder model
-const routes = require("./routes/reminderrouter");
+const app=express()
 
-app.use(cors());
-app.use(express.json());
-app.use(routes);
+const routes = require("./routes/reminderrouter")
 
-// Connect to MongoDB
+app.use(cors())
+app.use(express.json())
+app.use(routes)
+// app.u\
+
+// main().catch(err => console.log(err));
+
 async function main() {
-  try {
-    await mongoose.connect('//');
-    console.log("DB Connected");
-  } catch (error) {
-    console.error("Error connecting to DB:", error);
-  }
+  await mongoose.connect('').then(()=>console.log("DB Connect")).catch(err => console.log(err));
+
+  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
-main();
+main()
 
-// Update the root route to return reminders
-app.get("/", async (req, res) => {
-  try {
-    const reminders = await ReminderModel.find(); // Fetch reminders from MongoDB
-    res.status(200).json(reminders); // Send reminders as JSON
-  } catch (error) {
-    console.error("Error fetching reminders:", error);
-    res.status(500).json({ error: "Failed to fetch reminders" });
-  }
-});
+app.get("/",(req,res)=>{
+    res.send("hello")
+})
 
-// Start the server
-app.listen(6002, () => {
-  console.log("Server is running");
-});
+app.listen(6002,()=>{
+    console.log("Server is running")
+})

@@ -14,7 +14,7 @@ app.use(routes);
 // Connect to MongoDB
 async function main() {
   try {
-    await mongoose.connect('mongodb+srv://atchayaramesh574:5v5vsmdPIIiE0DV8@login.2gh0pqz.mongodb.net/?retryWrites=true&w=majority&appName=login');
+    await mongoose.connect('//');
     console.log("DB Connected");
   } catch (error) {
     console.error("Error connecting to DB:", error);

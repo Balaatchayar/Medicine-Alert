@@ -4,6 +4,14 @@
 
 Medicine Alert is a MERN stack application that sends email reminders to patients for their medication schedules. 
 
+- Caregivers can set medication reminders for patients, specifying the medicine name, reminder date and time, and patient details.
+
+- Email reminders are sent directly to patients when it's time to take their medication, ensuring the patient never forgets their medication.
+
+- Nodemailer is used to send email notifications to patients about medication schedules. It ensures that patients receive timely reminders when it's time to take their medication.
+
+
+
 ### Installation
 
 1. **Clone the repository:**
@@ -40,6 +48,16 @@ Add the following variables:
    ```
 
 ![Project Screenshot](./client/src/Assets/Screenshot1.png)
+
+### Caregivers can set medication reminders for patients, specifying the medicine name, reminder date and time, and patient details.
+
+![Project Screenshot](./client/src/Assets/Screenshot2.png)
+
+
+### Email reminders are sent directly to patients when it's time to take their medication, ensuring the patient never forgets their medication.
+
+
+![Project Screenshot](./client/src/Assets/Screenshot3.png)
 
 
 

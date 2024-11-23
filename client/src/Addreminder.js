@@ -13,7 +13,6 @@ const Reminderpage = () => {
   });
   const [errors, setErrors] = useState({});
 
-  // Update state on input change
   const adddata = (e) => {
     const { name, value } = e.target;
     setData({
@@ -22,7 +21,6 @@ const Reminderpage = () => {
     });
   };
 
-  // Validate form inputs
   const validate = () => {
     let formErrors = {};
     let isValid = true;
@@ -46,16 +44,15 @@ const Reminderpage = () => {
     return isValid;
   };
 
-  // Submit data to backend
   const submit = async (e) => {
     e.preventDefault();
-
+    
     if (!validate()) {
       return;
     }
-
+    
     try {
-      const res = await axios.post("https://medicine-alert.onrender.com/addreminder", data); // Updated endpoint
+      const res = await axios.post("http://localhost:6002/addreminder", data);
       if (res.status === 200) {
         alert("Reminder added successfully");
         navigate("/allreminder"); // Redirect to Allreminder page

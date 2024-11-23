@@ -10,7 +10,7 @@ const Allreminder = () => {
 
   const record = async () => {
     try {
-      const res = await axios.get("http://localhost:6002/allreminder");
+      const res = await axios.get("https://medicine-alert.onrender.com");
       setReminderlist(res.data);
     } catch (error) {
       console.error("Error fetching reminders:", error);

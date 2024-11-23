@@ -52,7 +52,7 @@ const Reminderpage = () => {
     }
     
     try {
-      const res = await axios.post("http://localhost:6002/addreminder", data);
+      const res = await axios.post("https://medicine-alert.onrender.com", data);
       if (res.status === 200) {
         alert("Reminder added successfully");
         navigate("/allreminder"); // Redirect to Allreminder page

@@ -20,7 +20,7 @@ app.use(routes); // Use routes from the router file
 // MongoDB connection
 async function main() {
     try {
-        await mongoose.connect('', {
+        await mongoose.connect('mongodb+srv://atchayaramesh574:5v5vsmdPIIiE0DV8@login.2gh0pqz.mongodb.net/?retryWrites=true&w=majority&appName=login', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });

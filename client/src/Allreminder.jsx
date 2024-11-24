@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const Allreminder = () => {
   const [reminderlist, setReminderlist] = useState([]);
+  const backendUrl = 'https://medicine-alert-backend.onrender.com'; // Update backend URL
 
   useEffect(() => {
     record();
@@ -10,7 +11,7 @@ const Allreminder = () => {
 
   const record = async () => {
     try {
-      const res = await axios.get("http://localhost:6002/allreminder");
+      const res = await axios.get(`${backendUrl}/allreminder`);
       setReminderlist(res.data);
     } catch (error) {
       console.error("Error fetching reminders:", error);
@@ -19,7 +20,7 @@ const Allreminder = () => {
 
   const deletereminder = async (id) => {
     try {
-      await axios.delete(`http://localhost:6002/deletereminder/${id}`);
+      await axios.delete(`${backendUrl}/deletereminder/${id}`);
       record(); // Refresh the list after deletion
     } catch (error) {
       console.error("Error deleting reminder:", error);

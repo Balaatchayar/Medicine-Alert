@@ -18,13 +18,13 @@ Medicine Alert is a MERN stack application that sends email reminders to patient
    ```sh
    git clone https://github.com/Balaatchayar/Medicine-Alert
   
-2. **Install backend dependencies and start the server:**
+2. **Install backend dependencies and start**
     ```sh
     cd server
     npm install
     node index.js
 
-3. **Install frontend dependencies and start the vite development server**
+3. **Install frontend dependencies and start**
     ```sh
     cd client
     npm install

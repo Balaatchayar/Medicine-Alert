@@ -6,11 +6,11 @@ const Allreminder = () => {
 
   useEffect(() => {
     record();
-  }, []);
+  }, []); // Empty dependency array
 
   const record = async () => {
     try {
-      const res = await axios.get("https://medicine-alert-backend.onrender.com/allreminder");
+      const res = await axios.get("http://localhost:6002/allreminder");
       setReminderlist(res.data);
     } catch (error) {
       console.error("Error fetching reminders:", error);
@@ -19,7 +19,7 @@ const Allreminder = () => {
 
   const deletereminder = async (id) => {
     try {
-      await axios.delete(`https://medicine-alert-backend.onrender.com/deletereminder/${id}`);
+      await axios.delete(`http://localhost:6002/deletereminder/${id}`);
       record(); // Refresh the list after deletion
     } catch (error) {
       console.error("Error deleting reminder:", error);

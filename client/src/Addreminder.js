@@ -12,7 +12,6 @@ const Reminderpage = () => {
     caretakeremail: ""
   });
   const [errors, setErrors] = useState({});
-  const backendUrl = 'https://medicine-alert-backend.onrender.com'; // Update backend URL
 
   const adddata = (e) => {
     const { name, value } = e.target;
@@ -53,7 +52,7 @@ const Reminderpage = () => {
     }
     
     try {
-      const res = await axios.post(`${backendUrl}/addreminder`, data);
+      const res = await axios.post("https://medicine-alert-backend.onrender.com/addreminder", data);
       if (res.status === 200) {
         alert("Reminder added successfully");
         navigate("/allreminder"); // Redirect to Allreminder page

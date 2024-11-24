@@ -1,16 +1,16 @@
 const express = require("express");
+const app = express();
 const nodemailer = require("nodemailer");
 const cors = require('cors');
 const dotenv = require('dotenv'); // Add this line
-const Reminder = require("../schema/reminderschema");
 
-dotenv.config(); // Load environment variables
+dotenv.config(); // Add this line
 
 const router = express.Router();
+const Reminder = require("../schema/reminderschema");
 
 app.use(cors());
 
-// Reminder check every second
 setInterval(async () => {
   const data = await Reminder.find({});
   if (data) {
@@ -46,14 +46,13 @@ setInterval(async () => {
             }
           }
           main();
-          const updatedData = await Reminder.findByIdAndUpdate(element.id, { isReminded: true });
+          const data = await Reminder.findByIdAndUpdate(element.id, { isReminded: true });
         }
       }
     });
   }
 }, 1000);
 
-// Routes for handling reminders
 router.get("/allreminder", async (req, res) => {
   try {
     const data = await Reminder.find({});
@@ -87,6 +86,10 @@ router.delete("/deletereminder/:id", async (req, res) => {
   } catch (error) {
     res.status(400).send(error);
   }
+});
+
+router.get("/email", async (req, res) => {
+  res.send("hii");
 });
 
 module.exports = router;
